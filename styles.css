@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Mandali&family=Sacramento&display=swap');
+/* Styles pour les éléments <body> et <html> afin d'occuper tout l'écran */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url("./image/peakpx.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: 'Sacramento', cursive;
+
+
+}
+
+/* Styles pour le conteneur principal pour centrer les éléments */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Styles pour les divs individuelles */
+.div1, .div2, .div3 {
+    width: 100%; /* 100% de la largeur de la fenêtre */
+    height: 100vh; /* 100% de la hauteur de la fenêtre */
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div1.active, .div2.active, .div3.active {
+    opacity: 1;
+}
+
+.div1{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.div2{
+    /*background-color: lightskyblue;*/
+}
+.div3{
+    /*background-color: darkseagreen;*/
+}
+
+.cadre{
+    /*height: 80vh;*/
+    margin: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    width: 70%;
+    font-size: 2vw;
+    color: rgba(143, 188, 143, 0);
+    text-align: center;
+    transition: color 1s ease-in-out;
+    animation: fade-in 1s ease-in-out 2s forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        color: rgba(143, 188, 143, 0);
+    }
+    100% {
+        color: rgba(143, 188, 143, 0.6);
+    }
+}
+.card {
+    /*display: inline-block;*/
+    /*background: none;*/
+    /*padding: 8px;*/
+}
+.slick-slider {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+.slick-prev {
+    text-align: center;
+    font-size: 2vw;
+    background:rgba(143, 188, 143, 0.4); /* Couleur grise avec opacité */
+    border: none;
+    border-radius: 10px; /* Arrondir les angles */
+    cursor: pointer;
+}
+
+.slick-next {
+    text-align: center;
+    font-size: 2vw;
+    background: rgba(143, 188, 143, 0.4); /* Couleur grise avec opacité */
+    border: none;
+    border-radius: 10px; /* Arrondir les angles */
+    cursor: pointer;
+}
+
+/**/
+.title {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 10vw;
+    color: rgba(143, 188, 143, 0.6);
+}
+
+.title:first-of-type {
+    /* Removed "infinite" to run animation only once */
+    animation: showup 7s;
+}
+
+.title:last-of-type {
+    /*width: 0px;*/
+    /* Removed "infinite" to run animation only once */
+    animation: reveal 7s forwards;
+}
+
+.title:last-of-type span {
+    margin-left: -50%;
+    /* Removed "infinite" to run animation only once */
+    animation: slidein 7s forwards;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    /*80% {opacity:1;}*/
+    100% {opacity:1;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;max-width:0%;}
+    20% {opacity:1;max-width:0%;}
+    30% {max-width:100%;}
+    80% {opacity:1;}
+    100% {opacity:1;max-width:100%;}
+}
+
+fieldset{
+    border: none;
+    width: 100%; /* Réglez la largeur du fieldset sur 100% */
+}
+
+.divForm1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.divForm2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.divForm3{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.divForm3 fieldset {
+    width: 100%;
+}
+
+.divForm3 fieldset textarea {
+    width: 100%;
+    height: 20vh;
+    box-sizing: border-box;
+    background-color: rgba(143, 188, 143, 0.6);
+    border: none;
+    border-radius: 10px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 1.5vw;
+}
+
+
+input, select {
+    font-size: 1.5vw;
+     background-color: rgba(143, 188, 143, 0.6);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 10px;
+    border: none;
+    width: 100%; /* Réglez la largeur de l'input et du select sur 100% */
+    box-sizing: border-box; /* Inclure la largeur de la bordure et du padding dans la largeur totale */
+}
+
+#contact{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#contact h1{
+    color: rgba(143, 188, 143, 0.6);
+    font-size: 5vw;
+
+}
+
+.divForm4 fieldset{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input::placeholder {
+    color:  rgba(0, 0, 0, 0.5);
+    font-size: 1.5vw;
+    font-style: italic;
+}
+
+textarea::placeholder {
+    color:  rgba(0, 0, 0, 0.5);;
+    font-size: 1.5vw;
+    font-style: italic;
+}
+
+.divForm4 fieldset button{
+    background-color: rgba(143, 188, 143, 0.6);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    border-radius: 10px;
+    font-size: 1.5vw;
+}

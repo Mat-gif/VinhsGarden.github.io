@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinh's Garden</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!--    <script src="script.js"></script>-->
+
+
+</head>
+<body>
+<div class="container">
+    <div class="div1 active">
+            <div class="cadre">
+                <div class="title">Vinh's</div>
+                <div  class="title">
+                    <span >Garden</span>
+                </div>
+            </div>
+            <div class="info">
+                Bienvenue chez Vinh's Garden, votre partenaire de confiance pour l'entretien d'espaces verts. Nous sommes spécialisés dans le débroussaillage, l'élagage et l'élimination des nuisibles tels que les rats et les guêpes. De plus, nous proposons des services de restauration de logements et de peinture.  Faites confiance à Vinh's Garden pour transformer vos espaces extérieurs en véritables havres de paix.
+            </div>
+
+
+    </div>
+    <div class="div2">
+        <div class="cadre">
+            <div class="card">
+                <div id="carrousel">
+                    <article>
+                        <img src="./image/avant_apres/image1.png">
+                    </article>
+                    <article>
+                        <img src="./image/avant_apres/image2.png">
+                    </article>
+                    <article>
+                        <img src="./image/avant_apres/image3.png">
+                    </article>
+                    <article>
+                        <img src="./image/avant_apres/image4.png">
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#carrousel').slick({
+                arrows: true,
+                dots: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: '<button type="button" class="slick-prev" ><i class="fa-solid fa-forward fa-rotate-180"></i></button>',
+                nextArrow: '<button type="button"  class="slick-next" ><i class="fa-solid fa-forward"></i></button>'
+            });
+        });
+    </script>
+
+
+
+
+    <div class="div3">
+        <div class="cadre">
+            <div class="container">
+                <form id="contact" >
+                    <h1>Contact</h1>
+<!--                    <h4></h4>-->
+
+
+                    <div class="divForm1">
+                        <fieldset>
+                            <input placeholder="Nom" type="text" tabindex="1" name="nom" required autofocus>
+                        </fieldset>
+                        <fieldset>
+                            <select name="lieu" id="lieu" tabindex="2" required autofocus>
+                                <option value="">Commune</option>
+                                <option value="boulouparis">Boulouparis</option>
+                                <option value="bourail">Bourail</option>
+                                <option value="dumbea">Dumbéa</option>
+                                <option value="faaa">Faaa</option>
+                                <option value="fayaoue">Fayaoué</option>
+                                <option value="hienghene">Hienghène</option>
+                                <option value="ile-des-pins">Île des Pins</option>
+                                <option value="kone">Koné</option>
+                                <option value="koumac">Koumac</option>
+                                <option value="la-foa">La Foa</option>
+                                <option value="lifou">Lifou</option>
+                                <option value="maré">Maré</option>
+                                <option value="mont-dore">Mont-Dore</option>
+                                <option value="noumea">Nouméa</option>
+                                <option value="ouegoa">Ouégoa</option>
+                                <option value="ouvea">Ouvéa</option>
+                                <option value="paita">Païta</option>
+                                <option value="poindimie">Poindimié</option>
+                                <option value="ponerihouen">Ponerihouen</option>
+                                <option value="pouebo">Pouébo</option>
+                                <option value="pouembout">Pouembout</option>
+                                <option value="poum">Poum</option>
+                                <option value="poya">Poya</option>
+                                <option value="sarramea">Sarraméa</option>
+                                <option value="thio">Thio</option>
+                                <option value="touho">Touho</option>
+                                <option value="voh">Voh</option>
+                                <option value="yate">Yaté</option>
+                            </select>
+                        </fieldset>
+
+                    </div>
+
+                    <div  class="divForm2">
+                        <fieldset>
+                            <input placeholder="Adresse mail" type="email" tabindex="2" name="email" required autofocus>
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="Numéro de téléphone" type="tel" tabindex="2" name="phone" required autofocus>
+                        </fieldset>
+                    </div>
+
+                    <div  class="divForm3">
+                        <fieldset>
+                            <textarea placeholder="Details des taches a réaliser..." tabindex="5" name="details" required autofocus></textarea>
+                        </fieldset>
+                    </div>
+
+                    <div  class="divForm4">
+                        <fieldset>
+<!--                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>-->
+                            <button name="submit" type="submit" >Envoyer</button>
+
+                        </fieldset>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.onload = function() {
+        const div1 = document.querySelector('.div1');
+        div1.scrollIntoView({ behavior: 'auto', block: 'start' });
+
+        document.getElementById('contact').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_e9ub9ps", "template_44tbmwg", this, "vIg8-air8Q4gaJjjX").then(
+                (result) => {
+                    console.log(result.text);
+                    alert("Message envoyé")
+                    location.reload();
+                },
+                (error) => {
+                    console.log(error.text);
+                    alert("Erreur d'envois")
+                }
+            );
+        });
+    }
+</script>
+
+</body>
+<script>
+    const div1 = document.querySelector('.div1');
+    const div2 = document.querySelector('.div2');
+    const div3 = document.querySelector('.div3');
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Proportion de la div visible dans la fenêtre pour déclencher le changement
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    observer.observe(div1);
+    observer.observe(div2);
+    observer.observe(div3);
+
+    function callback(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // La div est en train d'entrer dans la fenêtre visible
+                const targetDiv = entry.target;
+
+                // Réinitialise les classes "active" pour toutes les divs
+                div1.classList.remove('active');
+                div2.classList.remove('active');
+                div3.classList.remove('active');
+
+                // Ajoute la classe "active" à la div cible
+                targetDiv.classList.add('active');
+            }
+        });
+    }
+</script>
+
+
+</html>
+
